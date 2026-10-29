@@ -1,0 +1,36 @@
+{% extends "bank/base.html" %}
+{% block title %}{{ title }} - RSS Bank{% endblock %}
+{% block content %}
+<div class="panel">
+  <h1>{{ title }}</h1>
+  <div class="alert success">{{ message }}</div>
+
+  {% if account %}
+  <table class="info">
+    <tr><th>Account Number</th><td>{{ account.account_no }}</td></tr>
+    <tr><th>Name</th><td>{{ account.name }}</td></tr>
+    <tr><th>Balance</th><td><strong>₹{{ account.balance }}</strong></td></tr>
+  </table>
+  {% endif %}
+
+  {% if transactions %}
+  <h2>Recent Transactions</h2>
+  <table class="list">
+    <thead><tr><th>Date</th><th>Type</th><th>Amount</th><th>Balance</th><th>Note</th></tr></thead>
+    <tbody>
+    {% for t in transactions %}
+      <tr>
+        <td>{{ t.created_at|date:"d M Y, H:i" }}</td>
+        <td>{{ t.get_kind_display }}</td>
+        <td>₹{{ t.amount }}</td>
+        <td>₹{{ t.balance_after }}</td>
+        <td>{{ t.note }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+
+  <a class="btn" href="{% url 'bank:home' %}">Back to Home</a>
+</div>
+{% endblock %}

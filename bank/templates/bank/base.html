@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}RSS Bank{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'bank/style.css' %}">
+</head>
+<body>
+  <header>
+    <a class="brand" href="{% url 'bank:home' %}">🏦 JSP Bank</a>
+    <nav>
+      <a href="{% url 'bank:new_account' %}">New Account</a>
+      <a href="{% url 'bank:balance' %}">Balance</a>
+      <a href="{% url 'bank:deposit' %}">Deposit</a>
+      <a href="{% url 'bank:withdraw' %}">Withdraw</a>
+      <a href="{% url 'bank:transfer' %}">Transfer</a>
+      <a href="{% url 'bank:close_account' %}">Close A/c</a>
+    </nav>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <footer>&copy; JSP Banking Application</footer>
+</body>
+</html>

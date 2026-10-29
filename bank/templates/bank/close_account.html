@@ -1,0 +1,9 @@
+{% extends "bank/base.html" %}
+{% block title %}Close Account - RSS Bank{% endblock %}
+{% block content %}
+<div class="panel">
+  <h1>Close Account</h1>
+  <p class="muted">Enter your account details and confirm to close your account.</p>
+  {% include "bank/_form.html" with button="Close Account" %}
+</div>
+{% endblock %}

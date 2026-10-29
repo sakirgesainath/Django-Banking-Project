@@ -1,0 +1,14 @@
+{% extends "bank/base.html" %}
+{% block title %}Home - RSS Bank{% endblock %}
+{% block content %}
+<h1>Welcome to RSS Bank</h1>
+<p class="muted">Open an account, or use an existing one to manage your money.</p>
+<div class="grid">
+  <a class="card" href="{% url 'bank:new_account' %}"><span>➕</span>New Account</a>
+  <a class="card" href="{% url 'bank:balance' %}"><span>💰</span>Balance</a>
+  <a class="card" href="{% url 'bank:deposit' %}"><span>⬇️</span>Deposit</a>
+  <a class="card" href="{% url 'bank:withdraw' %}"><span>⬆️</span>Withdraw</a>
+  <a class="card" href="{% url 'bank:transfer' %}"><span>🔁</span>Transfer</a>
+  <a class="card" href="{% url 'bank:close_account' %}"><span>🚫</span>Close A/c</a>
+</div>
+{% endblock %}

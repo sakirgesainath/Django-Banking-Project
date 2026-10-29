@@ -1,0 +1,9 @@
+{% extends "bank/base.html" %}
+{% block title %}Withdraw Money - RSS Bank{% endblock %}
+{% block content %}
+<div class="panel">
+  <h1>Withdraw Money</h1>
+  <p class="muted">Enter your account details and the amount to withdraw.</p>
+  {% include "bank/_form.html" with button="Withdraw" %}
+</div>
+{% endblock %}

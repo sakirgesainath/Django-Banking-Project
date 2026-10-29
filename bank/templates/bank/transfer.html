@@ -1,0 +1,9 @@
+{% extends "bank/base.html" %}
+{% block title %}Transfer Money - RSS Bank{% endblock %}
+{% block content %}
+<div class="panel">
+  <h1>Transfer Money</h1>
+  <p class="muted">Enter your details, the receiver's account number and the amount.</p>
+  {% include "bank/_form.html" with button="Transfer" %}
+</div>
+{% endblock %}

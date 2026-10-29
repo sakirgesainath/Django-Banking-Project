@@ -1,0 +1,9 @@
+{% extends "bank/base.html" %}
+{% block title %}View Balance - RSS Bank{% endblock %}
+{% block content %}
+<div class="panel">
+  <h1>View Balance</h1>
+  <p class="muted">Enter a valid account number, name and password.</p>
+  {% include "bank/_form.html" with button="Check Balance" %}
+</div>
+{% endblock %}

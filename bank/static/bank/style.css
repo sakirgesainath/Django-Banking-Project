@@ -1,0 +1,30 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, Arial, sans-serif; background: #f3f5f9; color: #1c2333; }
+header { background: #0b3d91; color: #fff; padding: 12px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+.brand { color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none; }
+nav a { color: #dbe7ff; margin-left: 14px; text-decoration: none; font-size: .95rem; }
+nav a:hover { color: #fff; text-decoration: underline; }
+main { max-width: 900px; margin: 30px auto; padding: 0 16px; min-height: 65vh; }
+footer { text-align: center; color: #777; padding: 20px; font-size: .85rem; }
+h1 { margin-top: 0; }
+.muted { color: #667; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-top: 24px; }
+.card { background: #fff; border-radius: 12px; padding: 28px 12px; text-align: center; text-decoration: none; color: #0b3d91; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,.08); transition: transform .12s; }
+.card:hover { transform: translateY(-3px); }
+.card span { display: block; font-size: 2rem; margin-bottom: 8px; }
+.panel { background: #fff; border-radius: 12px; padding: 28px; box-shadow: 0 2px 8px rgba(0,0,0,.08); max-width: 560px; margin: 0 auto; }
+.field { margin-bottom: 16px; }
+label { display: block; font-weight: 600; margin-bottom: 5px; }
+input[type=text], input[type=password], input[type=number] { width: 100%; padding: 10px; border: 1px solid #c4cbd8; border-radius: 8px; font-size: 1rem; }
+input[type=checkbox] { margin-right: 6px; }
+button, .btn { background: #0b3d91; color: #fff; border: 0; padding: 10px 22px; border-radius: 8px; font-size: 1rem; cursor: pointer; text-decoration: none; display: inline-block; }
+button:hover, .btn:hover { background: #082d6c; }
+.btn-link { margin-left: 12px; color: #667; }
+.alert { padding: 12px 14px; border-radius: 8px; margin-bottom: 18px; }
+.alert.error { background: #fdecea; color: #a12622; border: 1px solid #f5c2be; }
+.alert.success { background: #e8f6ec; color: #1d6b34; border: 1px solid #b9e2c6; }
+.error-text { color: #a12622; display: block; margin-top: 4px; }
+table { width: 100%; border-collapse: collapse; margin-bottom: 18px; }
+table.info th { text-align: left; width: 40%; padding: 8px; background: #f3f5f9; }
+table.info td { padding: 8px; }
+table.list th, table.list td { padding: 8px; border-bottom: 1px solid #e3e7ef; text-align: left; font-size: .9rem; }

@@ -1,0 +1,9 @@
+{% extends "bank/base.html" %}
+{% block title %}New Account - RSS Bank{% endblock %}
+{% block content %}
+<div class="panel">
+  <h1>New Account</h1>
+  <p class="muted">Fill in your details to open a new account.</p>
+  {% include "bank/_form.html" with button="Create Account" %}
+</div>
+{% endblock %}
